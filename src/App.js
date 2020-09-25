@@ -9,6 +9,7 @@ import {
 
 //Views
 import LoginView from "./Views/LoginView.js";
+import MainPageView from "./Views/MainPageView.js";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         </Route>
 
         <Route exact path="/home">
-          <h1>HOME</h1>
+          <MainPageView />
         </Route>
 
         <Route exact path="/login">
