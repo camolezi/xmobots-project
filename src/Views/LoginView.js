@@ -82,6 +82,7 @@ function LoginView() {
       dispatch(setLogin(obj.login));
       routerHistory.push("/home");
     }
+    //We would handle errors here
   }
   return (
     <Container maxWidth="sm" className={classes.container}>

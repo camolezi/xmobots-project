@@ -21,8 +21,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function MainPageSideBar() {
+function MainPageSideBar(props) {
   const classes = useStyles();
+  const username = props.username;
 
   return (
     <List
@@ -32,9 +33,9 @@ function MainPageSideBar() {
     >
       <ListItem>
         <ListItemAvatar>
-          <Avatar>U</Avatar>
+          <Avatar>{username.charAt(0).toUpperCase()}</Avatar>
         </ListItemAvatar>
-        <ListItemText primary="User" />
+        <ListItemText primary={username} />
       </ListItem>
 
       <Divider />
