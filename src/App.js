@@ -10,6 +10,7 @@ import {
 //Views
 import LoginView from "./Views/LoginView.js";
 import MainPageView from "./Views/MainPage/MainPageView.js";
+import SingUpView from "./Views/SingUpView.js";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         </Route>
 
         <Route exact path="/signup">
-          SIGNUP
+          <SingUpView />
         </Route>
 
         <Route>404 not found</Route>

@@ -1,6 +1,5 @@
 import React from "react";
 
-import BasicForm from "../Components/BasicForm.js";
 import {
   Button,
   TextField,
@@ -9,10 +8,13 @@ import {
   Typography,
   Link,
 } from "@material-ui/core";
-
 import { makeStyles } from "@material-ui/core/styles";
+
+import BasicForm from "../Components/BasicForm.js";
+
 import { Link as RouterLink, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import { setLogin } from "../Store/Slices/loginSlice.js";
 
 const useStyle = makeStyles((theme) => ({
