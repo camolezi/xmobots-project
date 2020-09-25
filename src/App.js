@@ -7,6 +7,9 @@ import {
   Redirect,
 } from "react-router-dom";
 
+//Views
+import LoginView from "./Views/LoginView.js";
+
 function App() {
   return (
     <Router>
@@ -20,7 +23,7 @@ function App() {
         </Route>
 
         <Route exact path="/login">
-          LOGIN
+          <LoginView />
         </Route>
 
         <Route exact path="/signup">
