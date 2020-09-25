@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 
 //Props: containerId: id for the container of the map
 function MainMap(props) {
+  const id = props.containerId;
+
   useEffect(() => {
     /*global L*/
-    const mymap = L.map(props.containerId).setView([51.505, -0.09], 13);
+    const mymap = L.map(id).setView([51.505, -0.09], 13);
 
     L.tileLayer(
       "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",

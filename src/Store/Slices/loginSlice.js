@@ -10,12 +10,11 @@ const loginSlice = createSlice({
   name: "login",
   initialState: initialState,
   reducers: {
-    setUserLogged: (state, action) => {
-      state.logged = action.payload;
-    },
-
     setLogin: (state, action) => {
       state.login = action.payload;
+      if (action.payload) {
+        state.logged = true;
+      }
     },
   },
 });
@@ -23,7 +22,7 @@ const loginSlice = createSlice({
 export default loginSlice.reducer;
 
 //Actions
-export const { setUserLogged, setLogin } = loginSlice.actions;
+export const { setLogin } = loginSlice.actions;
 
 //Selectors
 export const selectLogin = (state) => state.login.login;

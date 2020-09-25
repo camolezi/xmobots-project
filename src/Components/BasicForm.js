@@ -19,7 +19,7 @@ function BasicForm(props) {
     //here is where we would submit the form with AJAX
 
     //assume since we are not sumitting ok response
-    if (props.afterSubmit) props.afterSubmit(true);
+    if (props.afterSubmit) props.afterSubmit(true,formState);
   }
 
   function changedForm(e) {
