@@ -1,7 +1,10 @@
 import React from "react";
 
-import { Drawer } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
+import SideBar from "./SideBar.js";
+import MainMap from "./Map.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,25 +14,25 @@ const useStyles = makeStyles((theme) => ({
     width: 400,
     flexShrink: 1,
     flexGrow: 1,
-    backgroundColor: "red",
   },
   content: {
     flexGrow: 10,
     padding: theme.spacing(3),
-    backgroundColor: "blue",
+    height: "1000px",
   },
 }));
 
 function MainPageView() {
   const classes = useStyles();
+
   return (
     <main className={classes.root}>
-      <aside className={classes.drawer}>
-        <h1>This is a drawer</h1>
-      </aside>
+      <Paper variant="outlined" square className={classes.drawer}>
+        <SideBar />
+      </Paper>
 
-      <section className={classes.content}>
-        <h1>THe map will be here</h1>
+      <section id="mainMap" className={classes.content}>
+        <MainMap containerId="mainMap" />
       </section>
     </main>
   );

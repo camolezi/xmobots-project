@@ -3,7 +3,15 @@ import React from "react";
 import BasicForm from "../Components/BasicForm.js";
 import { Button, TextField, Grid, Link, Container } from "@material-ui/core";
 
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyle = makeStyles((theme) => ({
+  container: {},
+}));
+
 function LoginView() {
+  const classes = useStyle();
+
   const loginFormContent = (
     <Grid
       container
@@ -35,7 +43,7 @@ function LoginView() {
         />
       </Grid>
 
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <Button
           type="submit"
           fullWidth

@@ -9,7 +9,7 @@ import {
 
 //Views
 import LoginView from "./Views/LoginView.js";
-import MainPageView from "./Views/MainPageView.js";
+import MainPageView from "./Views/MainPage/MainPageView.js";
 
 function App() {
   return (
