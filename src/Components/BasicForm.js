@@ -17,9 +17,11 @@ function BasicForm(props) {
     setSubmitted(true);
 
     //here is where we would submit the form with AJAX
-
-    //assume since we are not sumitting ok response
-    if (props.afterSubmit) props.afterSubmit(true,formState);
+    //setTimeout to simulate a AJAX request
+    setTimeout(() => {
+      //assume since we are not sumitting ok response
+      if (props.afterSubmit) props.afterSubmit(true, formState);
+    }, 400);
   }
 
   function changedForm(e) {
