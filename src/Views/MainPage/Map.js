@@ -1,13 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
+//Utility
+import { ParseDMS, ConvertDMSToDD } from "../../Utility/AirportParse.js";
+
+//Store
+import { useSelector } from "react-redux";
+import { selectAllAirports } from "../../Store/Slices/airportSlice";
 
 //Props: containerId: id for the container of the map
 function MainMap(props) {
+  const airports = useSelector(selectAllAirports);
   const id = props.containerId;
+
+  const [map, setMap] = useState(null);
 
   useEffect(() => {
     /*global L*/
-    const mymap = L.map(id).setView([51.505, -0.09], 13);
-
+    const mymap = L.map(id).setView([-22.002917, -47.89875], 13);
     L.tileLayer(
       "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
       {
@@ -21,7 +30,26 @@ function MainMap(props) {
           "pk.eyJ1IjoiY2Ftb2xlemkiLCJhIjoiY2tmaG5xdnptMDZ2cDJ4bGRodjRteWsxbSJ9.M97VIuz7PtgpErxwqAX7QQ",
       }
     ).addTo(mymap);
+
+    setMap(mymap);
   }, []);
+
+  useEffect(() => {
+    airports.forEach((airport) => {
+      const airportCoord = ConvertDMSToDD(ParseDMS(airport.description));
+      if (!airportCoord) return;
+
+      const marker = L.marker(airportCoord, {
+        title: airport.name,
+      })
+        .on("click", (e) => {
+          map.flyTo(e.target.getLatLng(), 13);
+        })
+        .addTo(map);
+
+      marker.bindPopup(L.popup().setContent(airport.name));
+    });
+  }, [airports]);
 
   return <> </>;
 }

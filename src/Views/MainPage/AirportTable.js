@@ -13,7 +13,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 
 //Utility
-import { ParseDMS, ConvertDMSToDD } from "../../Utility/AirportParse.js";
+import { ParseDMS } from "../../Utility/AirportParse.js";
 
 //Store
 import { useSelector } from "react-redux";
@@ -24,10 +24,6 @@ const useStyles = makeStyles((theme) => ({}));
 function AirportTable() {
   const classes = useStyles();
   const airports = useSelector(selectAllAirports);
-
-  if (airports[0]) {
-    console.log(ConvertDMSToDD(airports[0].description));
-  }
 
   return (
     <TableContainer component={Paper}>

@@ -16,10 +16,10 @@ export function ParseDMS(input) {
   return result[0];
 }
 
-//This function converts a DMS coordinate string to DD format (latitude,longitude)
+//This function converts a DMS coordinate string to DD format [latitude,longitude]
 export function ConvertDMSToDD(dms) {
   //This regex captures the first part of the DMS coordinates, and separates the minutes,seconds,and degrees
-  const latitudeRegex = /0?(\d{2})(\d{2})(\d{2}([,.]\d{2}?))([SN])/i;
+  const latitudeRegex = /0?(\d{2})(\d{2})(\d{2}([,.]\d{2})?)([SN])/i;
   const latitudeResult = latitudeRegex.exec(dms);
   if (!latitudeResult) {
     return null;
@@ -27,11 +27,11 @@ export function ConvertDMSToDD(dms) {
   let latitudeValue = AbsoluteDMSToDD(
     latitudeResult[1],
     latitudeResult[2],
-    latitudeResult[3]
+    latitudeResult[3].replace(",", ".")
   );
   latitudeValue = latitudeResult[5] === "S" ? -latitudeValue : latitudeValue;
 
-  const longitudeRegex = /0?(\d{2})(\d{2})(\d{2}([,.]\d{2}?))([WE])/i;
+  const longitudeRegex = /0?(\d{2})(\d{2})(\d{2}([,.]\d{2})?)([WE])/i;
   const longitudeResult = longitudeRegex.exec(dms);
   if (!longitudeResult) {
     return null;
@@ -39,7 +39,7 @@ export function ConvertDMSToDD(dms) {
   let longitudeValue = AbsoluteDMSToDD(
     longitudeResult[1],
     longitudeResult[2],
-    longitudeResult[3]
+    longitudeResult[3].replace(",", ".")
   );
   longitudeValue =
     longitudeResult[5] === "W" ? -longitudeValue : longitudeValue;
@@ -53,5 +53,6 @@ function AbsoluteDMSToDD(str_degrees, str_minutes, str_seconds) {
   const seconds = Number(str_seconds);
 
   const decimalDegrees = degress + minutes / 60 + seconds / 3600;
+
   return decimalDegrees;
 }
