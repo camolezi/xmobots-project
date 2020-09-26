@@ -13,8 +13,5 @@ export function ParseDMS(input) {
   const dmsRegex = /\d{6}([,.]\d{2})?S\/\d{7}([,.]\d{2})?W/i;
   const result = dmsRegex.exec(input);
 
-  console.log(input);
-  console.log(result);
-
   return result[0];
 }
