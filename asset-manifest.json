@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/camolezi/xmobots-project/static/js/main.d03ab5b7.chunk.js",
+    "main.js.map": "/camolezi/xmobots-project/static/js/main.d03ab5b7.chunk.js.map",
+    "runtime-main.js": "/camolezi/xmobots-project/static/js/runtime-main.97a86b4e.js",
+    "runtime-main.js.map": "/camolezi/xmobots-project/static/js/runtime-main.97a86b4e.js.map",
+    "static/js/2.20dd7f2b.chunk.js": "/camolezi/xmobots-project/static/js/2.20dd7f2b.chunk.js",
+    "static/js/2.20dd7f2b.chunk.js.map": "/camolezi/xmobots-project/static/js/2.20dd7f2b.chunk.js.map",
+    "index.html": "/camolezi/xmobots-project/index.html",
+    "precache-manifest.d634efbfdc3d2f010fa4312aeeb29063.js": "/camolezi/xmobots-project/precache-manifest.d634efbfdc3d2f010fa4312aeeb29063.js",
+    "service-worker.js": "/camolezi/xmobots-project/service-worker.js",
+    "static/js/2.20dd7f2b.chunk.js.LICENSE.txt": "/camolezi/xmobots-project/static/js/2.20dd7f2b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97a86b4e.js",
+    "static/js/2.20dd7f2b.chunk.js",
+    "static/js/main.d03ab5b7.chunk.js"
+  ]
+}
