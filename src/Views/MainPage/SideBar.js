@@ -18,6 +18,13 @@ import BackupIcon from "@material-ui/icons/Backup";
 import UploadDialog from "./UploadDialog.js";
 import AirportTable from "./AirportTable.js";
 
+//Store
+import { useDispatch } from "react-redux";
+import { SetAirports } from "../../Store/Slices/airportSlice";
+
+//default airports example
+import defaultAirports from "../../locationsExemple.json";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
@@ -26,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 function MainPageSideBar(props) {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const username = props.username;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -56,11 +64,14 @@ function MainPageSideBar(props) {
           <ListItemText primary="Upload File" />
         </ListItem>
 
-        <ListItem button onClick={() => console.log("click2")}>
+        <ListItem
+          button
+          onClick={() => dispatch(SetAirports(defaultAirports.aerodromes))}
+        >
           <ListItemIcon>
             <RoomIcon />
           </ListItemIcon>
-          <ListItemText primary="Show Points" />
+          <ListItemText primary="Load Example Airports" />
         </ListItem>
 
         <ListItem>

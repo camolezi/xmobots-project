@@ -4,7 +4,6 @@ const initialState = {
   airports: [],
 };
 
-//Create store slice- for login
 const airportReducer = createSlice({
   name: "airport",
   initialState: initialState,
@@ -12,13 +11,17 @@ const airportReducer = createSlice({
     AddAirport: (state, action) => {
       state.airports.push(action.payload);
     },
+    SetAirports: (state, action) => {
+      state.airports = action.payload;
+    },
   },
 });
 
+//Reducer
 export default airportReducer.reducer;
 
 //Actions
-export const { AddAirport } = airportReducer.actions;
+export const { AddAirport, SetAirports } = airportReducer.actions;
 
 //Selectors
 export const selectAllAirports = (state) => state.airport.airports;

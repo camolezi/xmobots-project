@@ -11,14 +11,24 @@ import {
 } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
-import data from "../../locationsExemple.json";
 
-import { ParseDMS } from "../../Utility/AirportParse.js";
+//Utility
+import { ParseDMS, ConvertDMSToDD } from "../../Utility/AirportParse.js";
+
+//Store
+import { useSelector } from "react-redux";
+import { selectAllAirports } from "../../Store/Slices/airportSlice";
 
 const useStyles = makeStyles((theme) => ({}));
 
 function AirportTable() {
   const classes = useStyles();
+  const airports = useSelector(selectAllAirports);
+
+  if (airports[0]) {
+    console.log(ConvertDMSToDD(airports[0].description));
+  }
+
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -32,7 +42,7 @@ function AirportTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.aerodromes.map((row) => (
+          {airports.map((row) => (
             <TableRow key={row.name}>
               <TableCell component="th" scope="row">
                 {row.name}
