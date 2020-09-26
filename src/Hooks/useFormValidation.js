@@ -45,7 +45,7 @@ function useFormValidation(validationObject) {
 }
 
 //This function is just a utility function for creating validation in forms- Use this only with textField and button components
-//The first returned value is a object containing the props for TextField components, and the second the props for a button.
+//The first returned value is a object containing the props for TextField components, and the second the props for a the submit button.
 function useValidationPropsTextField(validationObject) {
   const [formError, onChangeFormError] = useFormValidation(validationObject);
 

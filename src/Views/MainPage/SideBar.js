@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   List,
@@ -15,6 +15,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import RoomIcon from "@material-ui/icons/Room";
 import BackupIcon from "@material-ui/icons/Backup";
 
+import UploadDialog from "./UploadDialog.js";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
@@ -24,36 +26,43 @@ const useStyles = makeStyles((theme) => ({
 function MainPageSideBar(props) {
   const classes = useStyles();
   const username = props.username;
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
-    <List
-      className={classes.root}
-      component="nav"
-      aria-label="main mailbox folders"
-    >
-      <ListItem>
-        <ListItemAvatar>
-          <Avatar>{username.charAt(0).toUpperCase()}</Avatar>
-        </ListItemAvatar>
-        <ListItemText primary={username} />
-      </ListItem>
+    <>
+      <UploadDialog
+        open={isDialogOpen}
+        handleClose={() => setIsDialogOpen(false)}
+      />
+      <List
+        className={classes.root}
+        component="nav"
+        aria-label="main mailbox folders"
+      >
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar>{username.charAt(0).toUpperCase()}</Avatar>
+          </ListItemAvatar>
+          <ListItemText primary={username} />
+        </ListItem>
 
-      <Divider />
+        <Divider />
 
-      <ListItem button onClick={() => console.log("click1")}>
-        <ListItemIcon>
-          <BackupIcon />
-        </ListItemIcon>
-        <ListItemText primary="Upload File" />
-      </ListItem>
+        <ListItem button onClick={() => setIsDialogOpen(true)}>
+          <ListItemIcon>
+            <BackupIcon />
+          </ListItemIcon>
+          <ListItemText primary="Upload File" />
+        </ListItem>
 
-      <ListItem button onClick={() => console.log("click2")}>
-        <ListItemIcon>
-          <RoomIcon />
-        </ListItemIcon>
-        <ListItemText primary="Show Points" />
-      </ListItem>
-    </List>
+        <ListItem button onClick={() => console.log("click2")}>
+          <ListItemIcon>
+            <RoomIcon />
+          </ListItemIcon>
+          <ListItemText primary="Show Points" />
+        </ListItem>
+      </List>
+    </>
   );
 }
 
