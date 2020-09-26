@@ -14,7 +14,7 @@ import SingUpView from "./Views/SingUpView.js";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/xmobots-project">
       <Switch>
         <Route exact path="/">
           <Redirect to="/home" />
