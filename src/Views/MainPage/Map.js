@@ -35,9 +35,15 @@ function MainMap(props) {
   }, []);
 
   useEffect(() => {
+    if (!map) return;
+
+    let allPositions = [];
+
     airports.forEach((airport) => {
       const airportCoord = ConvertDMSToDD(ParseDMS(airport.description));
       if (!airportCoord) return;
+
+      allPositions.push(airportCoord);
 
       const marker = L.marker(airportCoord, {
         title: airport.name,
@@ -49,6 +55,8 @@ function MainMap(props) {
 
       marker.bindPopup(L.popup().setContent(airport.name));
     });
+
+    map.flyToBounds(allPositions);
   }, [airports]);
 
   return <> </>;
