@@ -16,7 +16,7 @@ import RoomIcon from "@material-ui/icons/Room";
 import BackupIcon from "@material-ui/icons/Backup";
 
 import UploadDialog from "./UploadDialog.js";
-import AirportTable from "./Table.js";
+import AirportTable from "./AirportTable.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {

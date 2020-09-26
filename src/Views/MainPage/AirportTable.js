@@ -13,6 +13,8 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import data from "../../locationsExemple.json";
 
+import { ParseDMS } from "../../Utility/AirportParse.js";
+
 const useStyles = makeStyles((theme) => ({}));
 
 function AirportTable() {
@@ -36,7 +38,7 @@ function AirportTable() {
                 {row.name}
               </TableCell>
               <TableCell align="right">{row.city}</TableCell>
-              <TableCell align="right">{row.description}</TableCell>
+              <TableCell align="right">{ParseDMS(row.description)}</TableCell>
               <TableCell align="right">{row.created_at}</TableCell>
               <TableCell align="right">{row.runways.length}</TableCell>
             </TableRow>
