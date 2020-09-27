@@ -4,6 +4,7 @@ const initialState = {
   airports: [],
 };
 
+//This slice stores airport information
 const airportReducer = createSlice({
   name: "airport",
   initialState: initialState,

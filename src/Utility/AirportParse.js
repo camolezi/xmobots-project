@@ -18,7 +18,7 @@ export function ParseDMS(input) {
 
 //This function converts a DMS coordinate string to DD format [latitude,longitude]
 export function ConvertDMSToDD(dms) {
-  //This regex captures the first part of the DMS coordinates, and separates the minutes,seconds,and degrees
+  //This regex captures the latitude part of the DMS coordinates, and separates the minutes,seconds,and degrees
   const latitudeRegex = /0?(\d{2})(\d{2})(\d{2}([,.]\d{2})?)([SN])/i;
   const latitudeResult = latitudeRegex.exec(dms);
   if (!latitudeResult) {
@@ -31,6 +31,7 @@ export function ConvertDMSToDD(dms) {
   );
   latitudeValue = latitudeResult[5] === "S" ? -latitudeValue : latitudeValue;
 
+  //This regex captures the longitude part of the DMS coordinates, and separates the minutes,seconds,and degrees
   const longitudeRegex = /0?(\d{2})(\d{2})(\d{2}([,.]\d{2})?)([WE])/i;
   const longitudeResult = longitudeRegex.exec(dms);
   if (!longitudeResult) {

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-//This is a LoadingCircle component. It returns a centered loading circle
+//This is a LoadingCircle component. It returns a centered rotating loading circle.
 function LoadingCircle(props) {
   const classes = useStyles();
   return (

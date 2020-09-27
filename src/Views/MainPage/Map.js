@@ -36,15 +36,17 @@ function MainMap(props) {
 
   useEffect(() => {
     if (!map) return;
+    if (!airports) return;
 
     let allPositions = [];
 
+    //forEach airport in the store, crates a marker and a cicle on the provided location
     airports.forEach((airport) => {
       const airportCoord = ConvertDMSToDD(ParseDMS(airport.description));
+
       if (!airportCoord) return;
 
       allPositions.push(airportCoord);
-
       const marker = L.marker(airportCoord, {
         title: airport.name,
       })

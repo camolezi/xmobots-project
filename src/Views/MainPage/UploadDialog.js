@@ -9,17 +9,18 @@ import {
   Input,
 } from "@material-ui/core";
 
-import { makeStyles } from "@material-ui/core/styles";
-
 import { useDispatch } from "react-redux";
 import { SetAirports } from "../../Store/Slices/airportSlice";
 
-const useStyles = makeStyles((theme) => ({}));
+/*
+This component handles getting a user provided airport file. And adding the content of the file to the redux store
 
-//Props- input:
-//shouldOpen
+Props- input:
+  open:boolean -if true the dialog is open
+  handleClose:function - this function is called when the dialog should be closed
+
+*/
 function UploadDialog(props) {
-  const classes = useStyles();
   const dispatch = useDispatch();
 
   const [uploadFile, setUploadFile] = useState(null);
@@ -41,6 +42,7 @@ function UploadDialog(props) {
 
   const uploadFileHandler = () => {
     const reader = new FileReader();
+
     reader.onload = (event) => {
       const resultJson = JSON.parse(event.target.result);
       if (!resultJson.aerodromes) {

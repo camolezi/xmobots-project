@@ -25,6 +25,11 @@ function AirportTable() {
   const classes = useStyles();
   const airports = useSelector(selectAllAirports);
 
+  if (airports === undefined || airports.length === 0) {
+    return <></>;
+  }
+
+  //Creates a table with the provided airport information
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">

@@ -19,12 +19,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     paddingTop: "2em",
   },
+
+  descriptionText: {
+    paddingBottom: "1em",
+  },
 }));
 
 function SignUpView() {
   const classes = useStyles();
   const routerHistory = useHistory();
 
+  //Ids of text fields
   const id_username = "usernameField";
   const id_email = "emailField";
   const id_password = "passwordField";
@@ -144,6 +149,14 @@ function SignUpView() {
 
   return (
     <Container className={classes.root} maxWidth="sm">
+      <Typography
+        variant="h5"
+        component="h1"
+        gutterBottom
+        className={classes.descriptionText}
+      >
+        Create new account
+      </Typography>
       <BasicForm id="signupform" afterSubmit={afterSinUp}>
         {SignUpForm}
       </BasicForm>
