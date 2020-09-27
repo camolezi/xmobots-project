@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/xmobots-project/precache-manifest.3f4f258c2986dba1e670cb30094e8300.js"
+  "/xmobots-project/precache-manifest.5806d3fa16a6ee14080178e6c9b81027.js"
 );
 
 self.addEventListener('message', (event) => {

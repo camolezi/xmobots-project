@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/xmobots-project/static/js/main.37bbef4d.chunk.js",
-    "main.js.map": "/xmobots-project/static/js/main.37bbef4d.chunk.js.map",
+    "main.js": "/xmobots-project/static/js/main.845d0fa0.chunk.js",
+    "main.js.map": "/xmobots-project/static/js/main.845d0fa0.chunk.js.map",
     "runtime-main.js": "/xmobots-project/static/js/runtime-main.0e485c2d.js",
     "runtime-main.js.map": "/xmobots-project/static/js/runtime-main.0e485c2d.js.map",
-    "static/js/2.4a4787fb.chunk.js": "/xmobots-project/static/js/2.4a4787fb.chunk.js",
-    "static/js/2.4a4787fb.chunk.js.map": "/xmobots-project/static/js/2.4a4787fb.chunk.js.map",
+    "static/js/2.ce6849b5.chunk.js": "/xmobots-project/static/js/2.ce6849b5.chunk.js",
+    "static/js/2.ce6849b5.chunk.js.map": "/xmobots-project/static/js/2.ce6849b5.chunk.js.map",
     "index.html": "/xmobots-project/index.html",
-    "precache-manifest.3f4f258c2986dba1e670cb30094e8300.js": "/xmobots-project/precache-manifest.3f4f258c2986dba1e670cb30094e8300.js",
+    "precache-manifest.5806d3fa16a6ee14080178e6c9b81027.js": "/xmobots-project/precache-manifest.5806d3fa16a6ee14080178e6c9b81027.js",
     "service-worker.js": "/xmobots-project/service-worker.js",
-    "static/js/2.4a4787fb.chunk.js.LICENSE.txt": "/xmobots-project/static/js/2.4a4787fb.chunk.js.LICENSE.txt"
+    "static/js/2.ce6849b5.chunk.js.LICENSE.txt": "/xmobots-project/static/js/2.ce6849b5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0e485c2d.js",
-    "static/js/2.4a4787fb.chunk.js",
-    "static/js/main.37bbef4d.chunk.js"
+    "static/js/2.ce6849b5.chunk.js",
+    "static/js/main.845d0fa0.chunk.js"
   ]
 }
