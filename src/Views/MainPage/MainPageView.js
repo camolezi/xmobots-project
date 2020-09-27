@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -9,7 +9,7 @@ import MainMap from "./Map.js";
 import { Redirect } from "react-router-dom";
 
 //store
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectLogged, selectLogin } from "../../Store/Slices/loginSlice.js";
 
 const useStyles = makeStyles((theme) => ({
