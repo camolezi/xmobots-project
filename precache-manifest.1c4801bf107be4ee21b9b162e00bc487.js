@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2989e30c3acfef6215b7c7e77c8c6808",
+    "revision": "0fae442351fa77e86f7e7bd6ccd8825f",
     "url": "/xmobots-project/index.html"
   },
   {
