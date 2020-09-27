@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b15b537f2da068ee4a2781d724e904e1",
+    "revision": "c457f02efc352fa8980f694597334037",
     "url": "/xmobots-project/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xmobots-project/static/js/2.4a4787fb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "eec8599ac36e33bcf07f",
-    "url": "/xmobots-project/static/js/main.73056bc8.chunk.js"
+    "revision": "65c4aefb05a945d08a8b",
+    "url": "/xmobots-project/static/js/main.37bbef4d.chunk.js"
   },
   {
     "revision": "a69c3dd8a59ae2a6ef73",
