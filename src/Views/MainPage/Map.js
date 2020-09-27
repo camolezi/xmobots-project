@@ -53,6 +53,14 @@ function MainMap(props) {
         })
         .addTo(map);
 
+      L.circle(airportCoord, {
+        color: "red",
+        fillColor: "#f03",
+        fillOpacity: 0.5,
+        radius: 5000,
+        stroke: false,
+      }).addTo(map);
+
       marker.bindPopup(L.popup().setContent(airport.name));
     });
 

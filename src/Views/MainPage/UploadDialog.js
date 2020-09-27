@@ -80,7 +80,7 @@ function UploadDialog(props) {
         <Button
           onClick={uploadFileHandler}
           color="primary"
-          disabled={!Boolean(uploadFile) && errorState}
+          disabled={!Boolean(uploadFile) || errorState}
         >
           Upload
         </Button>
