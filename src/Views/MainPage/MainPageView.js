@@ -17,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   drawer: {
-    width: 400,
+    width: "25%",
     flexShrink: 1,
-    flexGrow: 1,
+    flexGrow: 0,
   },
   content: {
-    flexGrow: 10,
+    flexGrow: 1,
     padding: theme.spacing(3),
-    height: "1000px",
+    height: "93vh",
   },
 }));
 
