@@ -1,10 +1,10 @@
-This project lets the user plot airports points on a map. 
+This project lets the user plot airports markers on a map. 
 
 ## Use the website online here:
 https://camolezi.github.io/xmobots-project
 
 ## How to use:
-After login, click Show Examples airports to display the set of example Airpots. 
+After login, click "Show Examples airports" button to display the standard set of example airports. You can click on a marker to zoom in, and get more information.
 
 You can upload your own airport file to the application, the expected format is: 
 ```json
