@@ -17,9 +17,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   drawer: {
-    width: "25%",
+    width: "30vw",
     flexShrink: 1,
     flexGrow: 0,
+    resize: "horizontal",
+    overflow: "auto",
   },
   content: {
     flexGrow: 1,
