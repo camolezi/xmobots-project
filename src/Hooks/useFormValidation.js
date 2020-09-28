@@ -24,15 +24,15 @@ import { useState, useEffect } from "react";
 function useFormValidation(validationObject) {
   const [elementsState, setElementsState] = useState({});
 
-  function setElement(id, value) {
+  const setElement = (id, value) => {
     setElementsState({ ...elementsState, [id]: value });
-  }
+  };
 
   useEffect(() => {
     Object.keys(validationObject).forEach((id) => {
       setElement(id, "");
     });
-  }, []);
+  }, [validationObject]);
 
   return [
     elementsState,

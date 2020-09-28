@@ -32,7 +32,7 @@ function MainMap(props) {
     ).addTo(mymap);
 
     setMap(mymap);
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (!map) return;
@@ -57,8 +57,7 @@ function MainMap(props) {
 
       L.circle(airportCoord, {
         color: "red",
-        fillColor: "#f03",
-        fillOpacity: 0.5,
+        fillOpacity: 0.3,
         radius: 5000,
         stroke: false,
       }).addTo(map);

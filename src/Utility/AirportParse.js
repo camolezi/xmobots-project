@@ -3,14 +3,9 @@
  All functions here are pure functions.
 */
 
-//Returns, if present a  DMS coordinate in the input text
+//Returns, if present, a DMS coordinate in the input text
 export function ParseDMS(input) {
-  /*
-  let r1 = /\d{6}S\/\d{7}W/i;
-  let r2 = /\d{6}\.\d{2}S\/\d{7}\.\d{2}W/i;
-  let r3 = /\d{6},\d{2}S\/\d{7},\d{2}W/i;
-  */
-  const dmsRegex = /\d{6}([,.]\d{2})?S\/0?\d{6}([,.]\d{2})?W/i;
+  const dmsRegex = /\d{6}([,.]\d{2})?[SN]\/0?\d{6}([,.]\d{2})?[WE]/i;
   const result = dmsRegex.exec(input);
 
   return result[0];
