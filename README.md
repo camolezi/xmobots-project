@@ -8,20 +8,21 @@ After login, click "Show Examples airports" button to display the standard set o
 
 You can upload your own airport file to the application, the expected format is: 
 ```json
- "aerodromes":[
-       {
-          "name":"Base Aérea Anapolis",
-          "city":"Anapolis",
-          "description":"AUTH/COOR APP ANAPOLIS E ACC BRASILIA ACONTECERA CENTRO COORD 161419.01S/0485820.09W (ANAPOLIS, GO) RAIO 12KM RTO",
-          "created_at":"14/10/1990",
-          "runways":[
-             {
-                "designation":"09/27",
-                "width":40,
-                "length":1026
-             }
-          ]
-       },
+ {
+  "aerodromes":[
+        {
+           "name":"Base Aérea Anapolis",
+           "city":"Anapolis",
+           "description":"AUTH/COOR APP ANAPOLIS E ACC BRASILIA ACONTECERA CENTRO COORD 161419.01S/0485820.09W (ANAPOLIS, GO) RAIO 12KM RTO",
+           "created_at":"14/10/1990",
+           "runways":[
+              {
+                 "designation":"09/27",
+                 "width":40,
+                 "length":1026
+              }
+           ]
+        },
 
 ```
 
