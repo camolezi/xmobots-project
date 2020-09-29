@@ -32,7 +32,7 @@ function useFormValidation(validationObject) {
     Object.keys(validationObject).forEach((id) => {
       setElement(id, "");
     });
-  }, [validationObject]);
+  }, []);
 
   return [
     elementsState,
